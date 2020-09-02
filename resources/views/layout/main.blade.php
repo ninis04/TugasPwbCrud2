@@ -25,6 +25,8 @@
       <a class="nav-item nav-link" href="{{ url ('/fasilitas')}}"><b>Fasilitas</b></a>
       <a class="nav-item nav-link" href="{{ url ('/gallery')}}"><b>Galerry</b></a>
       <a class="nav-item nav-link" href="{{ url ('/informasi')}}"><b>Informasi</b></a>
+      <a class="nav-item nav-link" href="{{ url ('/mahasiswa')}}"><b>Mahasiswa</b></a>
+      <a class="nav-item nav-link" href="{{ url ('/jurusan')}}"><b>Jurusan</b></a>
     </div>
   </div>
   </div>  

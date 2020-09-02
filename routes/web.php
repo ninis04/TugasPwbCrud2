@@ -26,3 +26,7 @@ Route::get ('/fasilitas', 'PagesController@fasilitas');
 Route::get ('/gallery', 'PagesController@gallery');
 
 Route::get ('/informasi', 'PagesController@informasi');
+
+Route::get ('/mahasiswa', 'MahasiswaController@index');
+
+Route::get('/jurusan','JurusanController@index');
