@@ -9,15 +9,23 @@
         <div class="container">
       <div class="row">
       <div clas="col-md-12"> 
-      <h2 class="mt-5"> Table Jurusan!</h2>
+      <h1 class="mt-5"> Table Jurusan!</h1>
       </div>
 </div>
 </div>
 
+<a href="/jurusan/create" class="btn btn-primary my-3">Tambah Data Jurusan</a>
+
+@if(session('status'))
+   <div class="alert alert-success">
+       {{session('status')}} 
+   </div>
+@endif
+
 <table class="table">
   <thead class="thead-dark">
    <tr>
-        <th scope="col"> # </th> 
+        <th scope="col"> No </th> 
         <th scope="col"> Nama Jurusan </th>  
         <th scope="col"> Aksi </th>
    </tr>
@@ -28,8 +36,14 @@
       <th scope="row">{{ $loop-> iteration }}</th>
       <td>{{ $jrs -> nama_jurusan }}</td>
       <td>
-        <a href="" class="badge badge-success">Edit</a>
-        <a href="" class="badge badge-danger">Hapus</a>
+     
+    <form action="jurusan/{{$jrs->id}}" method ="post" class="d-inline" onsubmit="return confirm('Apakah Anda Yakin Ingin Menghapus Data')">    
+    @method ('delete') 
+    @csrf
+      <button type="submit" class="badge badge-pill badge-danger"> Delete </button>
+   </form>
+        <a href="jurusan/{{$jrs->id}}/edit" class="badge badge-pill badge-success">Edit</a>
+        
       </td>
      </tr>
     @endforeach

@@ -26,7 +26,16 @@ Route::get ('/fasilitas', 'PagesController@fasilitas');
 Route::get ('/gallery', 'PagesController@gallery');
 
 Route::get ('/informasi', 'PagesController@informasi');
+//mahasiswa 
 
 Route::get ('/mahasiswa', 'MahasiswaController@index');
 
-Route::get('/jurusan','JurusanController@index');
+//jurusan
+// ::get('/jurusan','JurusanController@index');
+// ::get('/jurusan/create','JurusanController@create');
+// ::post('/jurusan','JurusanController@store');
+// ::delete('/jurusan/{jurusan}','JurusanController@destroy'); 
+// ::get('/jurusan/{jurusan}/edit','JurusanController@edit');
+// ::patch('/jurusan/{jurusan}','JurusanController@update');
+
+Route::resource('jurusan','JurusanController');
